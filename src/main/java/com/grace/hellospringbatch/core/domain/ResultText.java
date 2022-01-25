@@ -11,11 +11,11 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@DynamicUpdate // 일부값만 update 되는 경우 그 값만 update 쿼리를 날림
+@DynamicUpdate
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name="plain_text")
-public class PlainText {
+@Table(name="result_text")
+public class ResultText {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
