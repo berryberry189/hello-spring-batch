@@ -59,11 +59,13 @@ public class PlainTextJobConfigTest {
 
         // when
         JobExecution execution = jobLauncherTestUtils.launchJob();
+
         // then
         Assertions.assertEquals(execution.getExitStatus(), ExitStatus.COMPLETED);
         Assertions.assertEquals(resultTextRepository.count(), 12);
     }
 
+    // 텍스트 저장
     private void givenPlainText(Integer count){
         IntStream.range(0, count)
                 .forEach(
